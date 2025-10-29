@@ -2,35 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 <body>
-    <div class="layout">
-        <div class="nav">
-            <div class="logo">
-                <img src="img/logo.webp" alt="">
-            </div>
-            <a href="index.html">Home</a>
-            <a href="/archiv">Archive</a>
-            <a href="">Streaming</a>
-            <a href="participation.html">Participation</a>
-            <a href="/gallery">Gallery</a>
-            <a href="/feedback">Feedback</a>
-            <a href="/howtoprepare">How to prepare</a>
+  <div class="layout">
+    <div class="nav">
+      <div class="logo">
+        <img src="img/logo.webp" alt="">
+      </div>
+      <a href="index.html">Home</a>
+      <a href="">Archive</a>
+      <a href="">Streaming</a>
+      <a href="participation.html">Participation</a>
+      <a href="">Gallery</a>
+      <a href="">Feedback</a>
+      <a href="">How to prepare</a>
+    </div>
+
+    <section id="hero" class="hero">
+      <h1>Welcome to RobEurope</h1>
+      <p>
+        Explore creative projects and a collection of images designed with
+        HTML and CSS. This page demonstrates responsive design across devices.
+      </p>
+    </section>
+
+    <section id="services" class="services">
+      <h2>What I Do</h2>
+      <div class="services-container">
+        <div class="service">
+          <h3>Web Design</h3>
+          <p>
+            Creating responsive, modern websites using HTML and CSS.
+          </p>
         </div>
-        <div class="main">
-            <div class="card" onclick="toggleInfo(this)">
-                <img class="card-image" src="img/rob1.jpg" alt="">
-                <h3 class="card-title">Thank you to everyone that was involved in this project</h3>
-                <p class="card-info">We hope to see this competition happening again in a year and maybe with even more
-                    countries involved</p>
-            </div>
-            <!-- <div class="card">
+        <div class="service">
+          <h3>Optimization</h3>
+          <p>
+            Enhancing performance and user experience through clean code.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Photography</h3>
+          <p>
+            Selecting and editing high-quality visuals to tell better stories.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="main">
+      <div class="card" onclick="toggleInfo(this)">
+        <img class="card-image" src="img/rob1.jpg" alt="">
+        <h3 class="card-title">Thank you to everyone that was involved in this project</h3>
+        <p class="card-info">We hope to see this competition happening again in a year and maybe with even more
+          countries involved</p>
+      </div>
+      <!-- <div class="card">
                 <div class="card-video">
                     <iframe width="100%" height="200" src="https://www.youtube.com/embed/1_pwn8q73H0"
                         title="YouTube video" frameborder="0"
@@ -43,89 +76,100 @@
                     <p>Este texto aparece al hacer hover.</p>
                 </div>
             </div> -->
-            <div class="card" onclick="toggleInfo(this)">
-                <img class="card-image" src="img/rob2jpg.jpg" alt="">
-                <h3 class="card-title">It was a pleasure to have the indian team competing with us</h3>
-                <p class="card-info">we hope to see this competition happening again in a year and maybe with even more
-                    countries involved</p>
-            </div>
-            <div class="card" onclick="toggleInfo()">
-                <img class="card-image" src="img/rob3.jpg" alt="">
-                <h3 class="card-title">We warmly welcome our first participants from IDM</h3>
-            </div>
-            <div class="card" onclick="toggleInfo()">
-                <img class="card-image" src="img/rob4.jpg" alt="">
-                <h3 class="card-title">Start the RobEurope project. It was a great moment</h3>
-            </div>
-            <div class="card" onclick="toggleInfo(this)">
-                <img class="card-image" src="img/rob5.jpg" alt="">
-                <h3 class="card-title">That's a wrap with the presentation of the media-team</h3>
-                <p class="card-info">we finished our RobEurope project for 2023. Thank‘s to everyone who was involved
-                    and we hope to welcome you next year again</p>
-            </div>
-            <div class="card" onclick="toggleInfo(this)">
-                <img class="card-image" src="img/rob6.jpg" alt="">
-                <h3 class="card-title">The RobEurope competition will take place on the 7th march.</h3>
-                <p class="card-info">The competition will take place in each school of the competitors. Each school will
-                    be livestreaming their competition on YouTube. Both livestreams will run on the robeurope.com
-                    website.</p>
-            </div>
-            <div class="card" onclick="toggleInfo(this)">
-                <img class="card-image" src="img/rob7jpg.jpg" alt="">
-                <h3 class="card-title">The goal for each team is it to complete the parkour</h3>
-                <p class="card-info">The goal for each team is it to complete the parkour in the 3rd picture. The winner
-                    is the team that completed the parkour in the shortest time.</p>
-            </div>
-            <div class="card" onclick="toggleInfo()">
-                <img class="card-image" src="img/rob8.jpg" alt="">
-                <h3 class="card-title">First step: analyse second step: make improvements</h3>
-            </div>
-            <div class="card" onclick="toggleInfo(this)">
-                <img class="card-image" src="img/rob9.jpg" alt="">
-                <h3 class="card-title">The event, the progress and the people behind the
-                    project.</h3>
-                <p class="card-info">This event is hosted by @bbzidm We
-                    share on this page various informations about the event, the progress and the people behind the
-                    project.</p>
-            </div>
-            <div class="card" onclick="toggleInfo(this)">
-                <img class="card-image" src="img/rob10.jpg" alt="">
-                <h3 class="card-title">We express our gratitude to PH Bern for allowing us this day.</h3>
-            </div>
-            <div class="card" onclick="toggleInfo(this)">
-                <img class="card-image" src="img/rob11.jpg" alt="">
-                <h3 class="card-title">We finished our RobEurope project for 2023.</h3>
-                <p class="card-info">Our produced film will be posted here and on youtube in the next few days</p>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="footer-item">Terms and conditions</div>
-            <div class="footer-item">Privacy policy</div>
-            <div class="footer-item">&copy; 2025 MySite. All rights reserved.</div>
-            <div class="footer-item-contact">
-                Contact with us: <br>
-                <span class="icon-link">
-                    <i class="bi bi-envelope-fill"></i>
-                    <a href="mailto:info@robeurope.com">info@robeurope.com</a>
-                    <br>
-                </span>
-                <span class="icon-link">
-                    <i class="bi bi-instagram"></i>
-                    <a href="https://www.instagram.com/robeurope_official" target="_blank">@robeurope_official</a>
-                </span>
-            </div>
-            <div class="footer-item-validator">
-                <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://celesteag.github.io/RobEurope/" target="_blank">
-                    <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML" height="31" width="88">
-                </a>
-                <a href="https://jigsaw.w3.org/css-validator/" target="_blank">
-                    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" height="31" width="88">
-                </a>
-            </div>
-        </div>
+      <div class="card" onclick="toggleInfo(this)">
+        <img class="card-image" src="img/rob2.jpg" alt="">
+        <h3 class="card-title">It was a pleasure to have the indian team competing with us</h3>
+        <p class="card-info">we hope to see this competition happening again in a year and maybe with even more
+          countries involved</p>
+      </div>
+      <div class="card" onclick="toggleInfo()">
+        <img class="card-image" src="img/rob3.jpg" alt="">
+        <h3 class="card-title">We warmly welcome our first participants from IDM</h3>
+      </div>
+      <div class="card" onclick="toggleInfo()">
+        <img class="card-image" src="img/rob4.jpg" alt="">
+        <h3 class="card-title">Start the RobEurope project. It was a great moment</h3>
+      </div>
+      <div class="card" onclick="toggleInfo(this)">
+        <img class="card-image" src="img/rob5.jpg" alt="">
+        <h3 class="card-title">That's a wrap with the presentation of the media-team</h3>
+        <p class="card-info">we finished our RobEurope project for 2023. Thank‘s to everyone who was involved
+          and we hope to welcome you next year again</p>
+      </div>
+      <div class="card" onclick="toggleInfo(this)">
+        <img class="card-image" src="img/rob6.jpg" alt="">
+        <h3 class="card-title">The RobEurope competition will take place on the 7th march.</h3>
+        <p class="card-info">The competition will take place in each school of the competitors. Each school will
+          be livestreaming their competition on YouTube. Both livestreams will run on the robeurope.com
+          website.</p>
+      </div>
+      <div class="card" onclick="toggleInfo(this)">
+        <img class="card-image" src="img/rob7.jpg" alt="">
+        <h3 class="card-title">The goal for each team is it to complete the parkour</h3>
+        <p class="card-info">The goal for each team is it to complete the parkour in the 3rd picture. The winner
+          is the team that completed the parkour in the shortest time.</p>
+      </div>
+      <div class="card" onclick="toggleInfo()">
+        <img class="card-image" src="img/rob8.jpg" alt="">
+        <h3 class="card-title">First step: analyse second step: make improvements</h3>
+      </div>
+      <div class="card" onclick="toggleInfo(this)">
+        <img class="card-image" src="img/rob9.jpg" alt="">
+        <h3 class="card-title">The event, the progress and the people behind the
+          project.</h3>
+        <p class="card-info">This event is hosted by @bbzidm We
+          share on this page various informations about the event, the progress and the people behind the
+          project.</p>
+      </div>
+      <div class="card" onclick="toggleInfo(this)">
+        <img class="card-image" src="img/rob10.jpg" alt="">
+        <h3 class="card-title">We express our gratitude to PH Bern for allowing us this day.</h3>
+      </div>
+      <div class="card" onclick="toggleInfo(this)">
+        <img class="card-image" src="img/rob11.jpg" alt="">
+        <h3 class="card-title">We finished our RobEurope project for 2023.</h3>
+        <p class="card-info">Our produced film will be posted here and on youtube in the next few days</p>
+      </div>
     </div>
 
-    <script src="js/toogle-info.js"></script>
+    <section class="registration">
+      <h2>Join Our Community</h2>
+      <p>Sign up to receive news, inspiration, and free resources about web design and creativity.</p>
+      <form>
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <div class="footer">
+      <div class="footer-item">Terms and conditions</div>
+      <div class="footer-item">Privacy policy</div>
+      <div class="footer-item">&copy; 2025 MySite. All rights reserved.</div>
+      <div class="footer-item-contact">
+        Contact with us: <br>
+        <span class="icon-link">
+          <i class="bi bi-envelope-fill"></i>
+          <a href="mailto:info@robeurope.com">info@robeurope.com</a>
+          <br>
+        </span>
+        <span class="icon-link">
+          <i class="bi bi-instagram"></i>
+          <a href="https://www.instagram.com/robeurope_official" target="_blank">@robeurope_official</a>
+        </span>
+      </div>
+      <div class="footer-item-validator">
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://celesteag.github.io/RobEurope/"
+          target="_blank">
+          <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML" height="31" width="88">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/" target="_blank">
+          <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" height="31" width="88">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/toogle-info.js"></script>
 </body>
 
 </html>
