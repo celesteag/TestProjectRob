@@ -54,11 +54,12 @@
   max-height: 50px;
 }
 
-h1, .hero p {
+h1,
+.hero p {
   text-align: center;
 }
 
-h2 .services{
+h2 .services {
   text-align: center;
 }
 
@@ -105,8 +106,8 @@ h2 .services{
   flex-direction: column;
   flex-wrap: wrap;
   flex: 1;
-  width: calc(100% - 170px);  
-  margin-left: 170px;         
+  width: calc(100% - 170px);
+  margin-left: 170px;
   padding: 2rem 1rem;
   align-items: center;
   box-sizing: border-box;
@@ -176,7 +177,6 @@ h2 .services{
 }
 
 .registration {
-
   color: black;
   text-align: center;
   padding: 3rem 2rem;
@@ -184,8 +184,22 @@ h2 .services{
   border-top: 3px solid #02196b;
   border-bottom: 3px solid #02196b;
   background-color: #f5f5f5;
-  width: calc(100% - 170px);  
+  width: calc(100% - 170px);
   margin-left: 170px;
+}
+
+#register-form span {
+  color: lightcoral;
+  visibility: hidden;
+}
+
+#register-form li {
+  margin-bottom: 2rem;
+}
+
+#register-form input {
+  display: block;
+  /* makes the input a block-level element */
 }
 
 .registration h2 {
@@ -205,7 +219,8 @@ h2 .services{
   gap: 1rem;
 }
 
-.registration input {
+.registration input,
+.container-show-data li {
   padding: 0.8rem 1rem;
   border: none;
   border-radius: 6px;
@@ -224,6 +239,38 @@ h2 .services{
 .registration button:hover {
   background-color: #ffb200;
 }
+
+/* show-data CSS*/
+.container-show-data{
+  color: black;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin: 1rem 0;
+  border-top: 3px solid #02196b;
+  border-bottom: 3px solid #02196b;
+  background-color: #f5f5f5;
+}
+
+
+.container-show-data ul {
+  list-style: none;
+  padding: none;
+  display: inline-block;
+}
+
+.container-show-data li {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px 15px;
+}
+
+b {
+  color: #333;
+}
+
 
 
 .footer {
@@ -302,13 +349,13 @@ h2 .services{
     /* pushes the logo to the right */
   }
 
-  .hero{
+  .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-left: 0;         
+    margin-left: 0;
     text-align: center;
     padding: 2rem;
   }
@@ -319,7 +366,7 @@ h2 .services{
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-left: 0;     
+    margin-left: 0;
     background-color: #f5f5f5;
     text-align: center;
     padding: 2rem;
@@ -327,7 +374,7 @@ h2 .services{
 
   .services-container {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -346,7 +393,7 @@ h2 .services{
 
 
 
-  .service:hover{
+  .service:hover {
     transform: scale(0.97);
     opacity: 0.85;
     border-color: black;
@@ -405,7 +452,7 @@ h2 .services{
         display: block;
     } */
 
-  .registration{
+  .registration {
     width: 100%;
     margin-left: 0;
   }

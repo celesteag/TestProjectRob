@@ -135,9 +135,24 @@
     <section class="registration">
       <h2>Join Our Community</h2>
       <p>Sign up to receive news, inspiration, and free resources about web design and creativity.</p>
-      <form>
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit">Register</button>
+      <form action="show-data.html" id="register-form">
+        <ul style="list-style: none; padding: 0;">
+          <li>
+            <label for="name">Full Name:</label><br>
+            <input type="text" name="name" id="name">
+            <span id="form-name">* required field</span>
+          </li>
+
+          <li>
+            <label for="email">Email:</label><br>
+            <input type="text" name="email" id="email" placeholder="info@robeurope.com">
+            <span id="form-email">* required field</span>
+          </li>
+
+          <li>
+            <button type="submit">Register</button>
+          </li>
+        </ul>
       </form>
     </section>
 
@@ -170,6 +185,7 @@
   </div>
 
   <script src="js/toogle-info.js"></script>
+  <script src="js/validate.js"></script>
 </body>
 
 </html>
