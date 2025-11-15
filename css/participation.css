@@ -8,7 +8,7 @@
   /* centre horizontally */
   gap: 30px;
   padding: 20px;
-  margin: 0 70px auto;
+  margin: 0 90px auto;
   /*Up, left-right, down */
   min-height: 100vh;
   /* the entire height of the screen */
@@ -39,6 +39,7 @@
   gap: 10px;
   transition: all 0.3s ease;
   line-height: 1.6;
+  overflow-y: auto;
 }
 
 
@@ -91,7 +92,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    /* the cards are the same height */
+    margin: auto;
   }
 
   .container .card {
@@ -105,7 +106,6 @@
   .card:first-of-type {
     flex: 0 0 600px;
     max-width: 600px;
-    /* margin: 0 auto; */
   }
 }
 
@@ -113,11 +113,8 @@
 @media (min-width: 992px) {
   .container {
     flex-direction: row;
-    /* direction in line */
     flex-wrap: wrap;
-    /* allow them to get off if they don't fit */
     justify-content: center;
-    /* centre horizontally */
     align-items: flex-start;
     max-width: 1200px;
     margin: 50px auto;

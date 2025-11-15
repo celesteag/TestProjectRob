@@ -5,16 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 <body>
   <div class="layout">
     <div class="nav">
-      <div class="logo">
-        <img src="img/logo.webp" alt="">
-      </div>
+      <div class="hamburguer" id="hamburguer">☰</div>
       <a href="index.html">Home</a>
       <a href="">Archive</a>
       <a href="">Streaming</a>
@@ -142,13 +140,21 @@
             <input type="text" name="name" id="name">
             <span id="form-name">* required field</span>
           </li>
-
+          <li>
+            <label for="dni">DNI:</label><br>
+            <input type="text" name="dni" id="dni">
+            <span id="form-dni">* required field</span>
+          </li>
           <li>
             <label for="email">Email:</label><br>
             <input type="text" name="email" id="email" placeholder="info@robeurope.com">
             <span id="form-email">* required field</span>
           </li>
-
+          <li>
+            <label for="additionalInformation">Additional Information:</label><br>
+            <input type="text" name="additionalInformation" id="additionalInformation" placeholder="Programming enthusiast / Technology worker... ">
+            <span id="form-additionalInformation">* required field</span>
+          </li>
           <li>
             <button type="submit">Register</button>
           </li>
@@ -186,6 +192,7 @@
 
   <script src="js/toogle-info.js"></script>
   <script src="js/validate.js"></script>
+  <script src="js/hamburguer-menu.js"></script>
 </body>
 
 </html>
