@@ -1,141 +1,85 @@
-/* Main container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* centre horizontally */
-  gap: 30px;
-  padding: 20px;
-  margin: 0 90px auto;
-  /*Up, left-right, down */
-  min-height: 100vh;
-  /* the entire height of the screen */
-  justify-content: center;
-  /* centre vertically */
-
+/* Container general */
+.steps-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+  font-family: "Inter", sans-serif;
 }
 
-.container .card {
-  background: #ffffff;
-  border-radius: 15px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  /* fixed width */
-  min-height: auto;
-  /* the height is suitable */
-  aspect-ratio: auto;
-  /* remove width and height restrictions*/
-  padding: 25px 25px;
-  /* content space at top/bottom edge */
-  box-sizing: border-box;
-  /* padding included in size*/
-  gap: 10px;
-  transition: all 0.3s ease;
-  line-height: 1.6;
-  overflow-y: auto;
-}
-
-
-
-/* Hover efect */
-.container .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  border-color: #b3c7ff;
-}
-
-.container>h1,
-.container>h2 {
-  width: 100%;
+.section-title {
   text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-/* Title */
-.container .card h3 {
-  color: #1e1e6a;
-  margin-top: 0;
+.section-subtitle {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Cards */
+.step-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 40px;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #4f8cff;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.step-number {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  background: #ffb94f;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.step-card h3 {
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.step-card p,
+.step-card li {
+  line-height: 1.6;
+  color: #333;
+}
+
+.step-card a {
+  color: #4f8cff;
   font-weight: 600;
-  margin-bottom: 15px;
-}
-
-/* Text */
-.container .card p,
-.container .card li {
-  color: #222;
-  font-size: 16px;
-}
-
-/* Links */
-.container .card a {
-  color: #1e4eff;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
 }
 
-.container .card a:hover {
-  color: #d17b00;
+.step-card a:hover {
   text-decoration: underline;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    margin: auto;
-  }
 
-  .container .card {
-    flex: 1 1 45%;
-    max-width: 300px;
-    min-height: 350px;
-    /* minimum fixed height */
+@media (max-width: 600px) {
+  .step-number {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
   }
-
-  /* First card wider and centred */
-  .card:first-of-type {
-    flex: 0 0 600px;
-    max-width: 600px;
-  }
-}
-
-/* From large screens */
-@media (min-width: 992px) {
-  .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 50px auto;
-  }
-
-  .container .card {
-    flex: 1 1 30%;
-    /* three cards per row */
-    min-width: 280px;
-    max-width: 350px;
-    height: 400px;
-  }
-
-  .container .card>p,
-  .conatiner .card>li {
-    overflow-y: auto;
-    /* scroll vertical */
-    flex-grow: 1;
-    /* the content expands to fill the space */
-    margin: 0;
-    /* remove margins so that it fits well */
-  }
-
 }

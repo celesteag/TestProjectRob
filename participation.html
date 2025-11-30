@@ -12,86 +12,116 @@
 
 <body>
   <div class="layout">
-    <div class="nav">
-      <!-- <div class="logo">
-        <img src="img/logo.webp" alt="">
-      </div> -->
-      <div class="hamburguer" id="hamburguer">☰</div>
-      <a href="index.html">Home</a>
-      <a href="">Archiv</a>
-      <a href="">Streaming</a>
-      <a href="">Participation</a>
-      <a href="">Gallery</a>
-      <a href="">Feedback</a>
-      <a href="">How to prepare</a>
+    <nav class="navbar">
+      <div class="menu-icon" id="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="streaming.html">Streaming</a></li>
+        <li><a href="participation.html">Participation</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="archiv.html">Archiv</a></li>
+      </ul>
+    </nav>
+    
+    <section class="steps-container">
+    <h1 class="section-title">Inscription: how to …</h1>
+    <h2 class="section-subtitle">Steps to get started</h2>
+
+    <!-- Step -->
+    <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Step 1 (August) – Find teams</h3>
+        <p>
+            Find a teacher with an IT or robotic course at your school, willing to participate.
+            He has then to form up to 6 teams (2–3 students in each team).
+        </p>
     </div>
-    <div class="container">
-      <h1>Inscription: How to...</h1>
-      <h2>Steps to Get Started</h2>
 
-      <div class="card">
-        <h3>Step 1 (August) — Find Teams</h3>
-        <p>Find a teacher with an IT or robotic course at your school, willing to participate.
-          He has then to form up to 6 teams (2–3 students in each team).</p>
-      </div>
-
-      <div class="card">
-        <h3>Step 2 (August) — Organize Lego Robots</h3>
-        <p>Organize Lego Mindstorm sets. Borrow them from other schools or buy them on eBay.</p>
+    <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Step 2 (August) – Organize LEGO robots</h3>
+        <p>
+            Organize LEGO Mindstorms sets. Borrow them from other schools or buy them at eBay.
+            The following sets are allowed:
+        </p>
         <ul>
-          <li>LEGO Mindstorms EV3 Education Core Set 45544 (eBay)</li>
-          <li>LEGO® MINDSTORMS® EV3 31313 (eBay)</li>
-          <li>LEGO® Mindstorms NXT 2.0 8547-1 (eBay)</li>
-          <li>LEGO® Education SPIKE™ Prime-Set (still available)</li>
-          <li>Arduino Roboter Kit</li>
-
+            <li>Best!: LEGO Mindstorms EV3 Education Core Set 45544 (eBay)</li>
+            <li>LEGO® MINDSTORMS® EV3 31313 (eBay)</li>
+            <li>LEGO® MINDSTORMS® MINDSTORMS® NXT 2.0 8547-1 (eBay)</li>
+            <li>LEGO® Education SPIKE™ Prime</li>
+            <li>Arduino Robotic Kit</li>
         </ul>
-      </div>
+    </div>
 
-      <div class="card">
-        <h3>Step 3 (September) — Registration</h3>
-        <p>Fill in your registration here: <a href="#">Registration</a></p>
-        <p>For further information write us at <a href="mailto:info@robeurope.com">info@robeurope.com</a></p>
-      </div>
+    <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Step 3 (September) – Registration</h3>
+        <p>
+            Fill in your registration here:  
+            <a href="index.html">Registration</a><br>
+            More info: <a href="mailto:info@roboeurope.com">info@roboeurope.com</a>
+        </p>
+    </div>
 
-      <div class="card">
-        <h3>Step 4 (September) — Prepare Your Students</h3>
+    <div class="step-card">
+        <div class="step-number">4</div>
+        <h3>Step 4 (September) – Prepare your students</h3>
         <p>They will only know about the task on the day of the combat. Suggestions:</p>
         <ul>
-          <li>Let each team build a robot and start with a remote race.</li>
-          <li>Do a wall follower or line follower race.</li>
-          <li>Explain PD/PID control.</li>
-          <li>Organize navigation challenges or Tic Tac Toe with robots.</li>
+            <li>Build a robot and race with a remote (see pictures in gallery)</li>
+            <li>Use mobile apps for remote control</li>
+            <li>Follow a black line with colour sensor</li>
+            <li>Follower race with decision-making (turn left/right)</li>
+            <li>PID regulation testing</li>
+            <li>Navigation maze</li>
+            <li>Play Tic-Tac-Toe</li>
         </ul>
-      </div>
-
-      <div class="card">
-        <h3>Step 5 (October) — Infrastructure</h3>
-        <p>Prepare a 2x1 m table with a wall and all needed obstacles. Find all details <a href="#">here</a>.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Step 6 (January) — Streaming Setup</h3>
-        <p>Organize the streaming via a YouTube channel and send us the link. Prepare the room and referees.</p>
-      </div>
-
-      <div class="card">
-        <h3>Step 7 (January) — Printing the Layout</h3>
-        <p>We provide rules, simulation and a poster. Print everything <a href="#">here</a>.</p>
-      </div>
-
-      <div class="card">
-        <h3>Step 8 (February) — Combat Day</h3>
-        <p>We provide flyers and presentations. Check them <a href="#">here</a>.</p>
-        <p>Each school runs its combat from <strong>10:20–12:20 (MEZ)</strong>. Points from both runs count for
-          final ranking.</p>
-      </div>
-
-      <div class="card">
-        <h3>We are looking forward to a great event with you!</h3>
-      </div>
     </div>
+
+    <div class="step-card">
+        <div class="step-number">5</div>
+        <h3>Step 5 (October) – Infrastructure</h3>
+        <p>
+            You need a 2×1 m table with a wall, 10 cm high.  
+            Construct all the obstacles. Details: <a href="#">here</a>
+        </p>
+    </div>
+
+    <div class="step-card">
+        <div class="step-number">6</div>
+        <h3>Step 6 (January) – Streaming setup</h3>
+        <p>
+            Organize a YouTube stream. Prepare cameras, beamers and lighting.  
+            You will receive streaming test scenes weeks before the combat.
+        </p>
+    </div>
+
+    <div class="step-card">
+        <div class="step-number">7</div>
+        <h3>Step 7 (January) – Printing the layout</h3>
+        <p>
+            You receive rules and simulation. Print the poster and layout.  
+            PDF and resources: <a href="#">here</a>
+        </p>
+    </div>
+
+    <div class="step-card">
+        <div class="step-number">8</div>
+        <h3>Step 8 (February) – Day of the combat</h3>
+        <p>
+            Each school runs its own 10-min combat.  
+            All achieved points count toward world ranking.  
+            Presentation for combat: <a href="#">here</a>
+        </p>
+    </div>
+</section>
+
+
     <div class="footer">
       <div class="footer-item">Terms and conditions</div>
       <div class="footer-item">Privacy policy</div>

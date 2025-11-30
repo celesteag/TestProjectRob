@@ -1,44 +1,100 @@
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   background: #f1f1f1;
-  /* gris suave */
-  font-family: Arial, sans-serif;
 }
 
-/* Not hover mobile first*/
-.nav {
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #06012a;
+  height: 100px;
+}
+
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a:active {
+  color: #ffb200;
+}
+
+.menu-icon {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  background-color: #06012a;
-  align-items: center;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  height: 100vh;
-  width: 150px;
-  min-width: 170px;
-  box-sizing: border-box;
-  /* margin and padding included */
-  justify-content: start;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  z-index: 10000;
 }
 
+.menu-icon span {
+  display: block;
+  height: 4px;
+  background-color: orange;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
-.nav a {
+.menu-icon.open {
+  transform: rotate(45deg);
+}
+
+.menu-icon.open span:nth-child(1) {
+  transform: translateY(8px) rotate(90deg);
+  /* First bar rotates */
+}
+
+.menu-icon.open span:nth-child(2) {
+  opacity: 1;
+}
+
+.menu-icon.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-90deg);
+  /* Third bar rotates */
+}
+
+.nav-links {
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
   color: white;
   padding: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  display: block;
   text-align: center;
   text-decoration: none;
   margin: 0;
   justify-content: center;
 }
 
+.nav-links.open {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
-.nav a:active,
-.nav a:focus {
-  color: #ffb200;
+.nav-links li {
+  margin: 20px 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
 }
 
 h1 {
@@ -55,8 +111,7 @@ h1 {
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
-  margin-left: 210px;
-  width: calc(100% - 250px);
+  min-height: 70vh;
 }
 
 #container-show-data {
@@ -72,6 +127,20 @@ h1 {
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
 }
 
 .card p {
@@ -138,75 +207,46 @@ h1 {
 
 @media (min-width: 600px) {
 
-  /* Navbar replaces sidebar */
-  .nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
-    width: 100%;
-    height: 100px;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .nav a {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .nav>a:nth-child(n+6) {
-    display: none;
-  }
-
-  .hamburguer {
-    position: absolute;
-    top: 15px;
-    right: 30px;
-    font-size: 28px;
-    color: orange;
-    cursor: pointer;
-  }
-
-  /*Show all links*/
-  .nav.show-extras>a:nth-child(n+5) {
-    display: inline-block;
-    margin-right: 20px;
-  }
-
-  .nav a:hover {
-    color: #ff9500;
-    transform: scale(1.1);
-  }
-
-  .container-show-alldata {
-    max-width: 450px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
-    border-style: none;
-  }
-
   .card {
-    width: 100%;
-    max-width: 600px;
-    max-height: 100px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    max-width: 350px;
   }
 }
 
 @media (min-width: 768px) {
-  .container-show-alldata {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
+
+  .nav-links {
+    display: flex;
+    position: static;
+    /* Position the menu horizontally */
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .nav-links li a {
+    color: white;
+    padding: 30px;
+    display: block;
     text-align: center;
-    border-style: none;
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .card {
+    max-width: 500px;
   }
 }

@@ -1,16 +1,8 @@
-const hamburger = document.getElementById("hamburguer");
-const nav = document.querySelector(".nav");
+document.getElementById('menu-icon').addEventListener('click', function () {
+    const navLinks = document.getElementById('nav-links');
+    const menuIcon = document.getElementById('menu-icon');
 
-hamburger.addEventListener("click", () => {
-
-  if (window.innerWidth >= 600 && window.innerWidth < 768) {
-    // TABLET/LAPTOP (solo aquí mostramos extras)
-    nav.classList.toggle("show-extras");
-  }
-
-  if (window.innerWidth < 600) {
-    // MOBILE
-    nav.classList.toggle("open");
-  }
-
+    // Togglamos la clase "open" para mostrar o esconder el menú
+    navLinks.classList.toggle('open');
+    menuIcon.classList.toggle('open');
 });
